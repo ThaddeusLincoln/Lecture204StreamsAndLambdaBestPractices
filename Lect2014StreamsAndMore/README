@@ -1,0 +1,44 @@
+Streams : were introduced in Java8 and in this context 
+made reference to a sequence of computations. In other 
+words is a set of computational steps that are chained together.
+
+Rather than creating a STREAM from a Collection, we can create 
+one from scratch.
+
+Operations in STREAMs are lazily evaluated which means is that 
+intermediate operations are nor performed until there's a terminal
+operation. 
+
+We can also use more specific STREAM interfaces when we're working
+with lists of numbers, so IntStream, LongStream,... these interfaces
+have additional methods like sum(), min(), max() and few others that
+are useful when working with numbers.
+
+TIP : There's also parallel STREAM.
+
+LAMBDA best practices ===========================================================
+
+Variations used:
+
+1. Specified the types of parameters vs. letting the compiler infer them
+2. Used a return statement with curly braces for one-statement lambda vs.
+not using return because it's implied (hence not requiring curly braces).
+3. Used lambda expressions that contain one statement vs. lambda expressions
+that have more than one statement.
+4. Using parentheses when a lambda expression only has one argument vs. not
+using parentheses since they're optional when there's only one argument
+
+Short lambda expressions are usually readable no matter how concise they are.
+But when striving for conciseness, we can sometimes write lambda expression
+that are difficult to decipher because we've left out too much information.
+
+Tim's advice is to be consistent, and do not use different styles within the 
+same file and use comments.
+
+
+
+
+
+ 
+
+ 
